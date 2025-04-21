@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./RootLayout";
-import ChatApp from "./components/ChatApp";
+import ChatApp from "./Components/ChatApp";
 import ProtectedRoute from "./ProtectedRoutes";
-import SignUpPage from "./components/SignUpPage";
-import LoginPage from "./components/LoginPage";
+import SignUpPage from "./Components/SignUpPage";
+import LoginPage from "./Components/LoginPage";
 
 const router = createBrowserRouter([
   {

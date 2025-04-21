@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import ChatList from "./components/ChatList";
+import ChatList from "./Components/ChatList";
 import ChatIntro from "./Utils/WelcomePage";
 import useSocketSetup from "./Hooks/socketConnect";
 import socketMsgListner from "./Hooks/socketMsgListner";
 import { useDispatch, useSelector } from "react-redux";
-import Header from "./components/Header";
+import Header from "./Components/Header";
 
 const RootLayout = () => {
   // const [selectedChatId, setSelectedChatId] = useState("");
