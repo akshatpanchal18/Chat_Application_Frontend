@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LuEye, LuEyeClosed, LuImagePlus } from "react-icons/lu";
+import { NavLink, useNavigate } from "react-router-dom";
+import { userRegistration } from "../app/slices/authSlices";
+import { useDispatch, useSelector } from "react-redux";
 
 function SignUpPage() {
   const [signUpData, setSignUpData] = useState({
@@ -7,11 +10,19 @@ function SignUpPage() {
     email: "",
     password: "",
   });
-
-  const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
+  const dispatch = useDispatch();
+  const { isLoading, isError, error, isAuth } = useSelector(
+    (state) => state.auth
+  );
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/");
+    }
+  }, [isAuth]);
 
   const handleSignUpChange = (e) => {
     setSignUpData({ ...signUpData, [e.target.name]: e.target.value });
@@ -27,21 +38,20 @@ function SignUpPage() {
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    const regData = new FormData();
+    regData.append("name", signUpData.name);
+    regData.append("email", signUpData.name);
+    regData.append("password", signUpData.name);
+    regData.append("avatar", image);
 
-    // Simulating API call
-    setTimeout(() => {
-      console.log("Signing up with:", signUpData);
-      console.log("Uploaded image:", image);
-      setLoading(false);
+    dispatch(userRegistration(regData));
+    if (isAuth) {
       setSignUpData({
         name: "",
         email: "",
         password: "",
       });
-      setImage(null);
-      setPreview(null);
-    }, 2000);
+    }
   };
 
   return (
@@ -59,7 +69,7 @@ function SignUpPage() {
                 Create an Account
               </h1>
             </div>
-
+            {isError && <p className="text-red-500 text-center">{error}</p>}
             {/* Profile Image Upload */}
             <div className="flex flex-col items-center mb-6">
               {preview ? (
@@ -141,18 +151,21 @@ function SignUpPage() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 shadow-sm mb-6"
-              disabled={loading}
+              className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full outline-none border-none bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 shadow-sm mb-6"
+              disabled={isLoading}
             >
-              {loading ? "Loading..." : "Sign Up"}
+              {isLoading ? "Loading..." : "Sign Up"}
             </button>
 
             {/* Login Link */}
             <div className="flex justify-center text-gray-900 text-base font-medium leading-6">
               Already have an account?
-              <a href="#" className="text-indigo-600 font-semibold pl-3">
+              <NavLink
+                to="/login"
+                className="text-indigo-600 font-semibold pl-3"
+              >
                 Login
-              </a>
+              </NavLink>
             </div>
           </form>
         </div>

@@ -1,13 +1,12 @@
-import Login from "./Components/LoginPage";
-import SignUpPage from "./Components/SignUpPage";
+import { useState } from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./Routes";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <div>
-        {/* <Login /> */}
-        <SignUpPage />
-      </div>
+      <RouterProvider router={router} />
     </>
   );
 }

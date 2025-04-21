@@ -1,0 +1,149 @@
+
+@layer components {
+    .theme-plate1 {
+  --button: #1f2937; /* Dark blue-gray button */
+  --button-text: #ffffff; /* White text on buttons */
+  --button-hover: #374151; /* Slightly lighter hover */
+  --message-receiver: #2c2f36; /* Dark card for received messages */
+  --receiver-text: #e5e7eb; /* Light text for receiver */
+  --message-sender: #1f2937; /* Sender message background */
+  --sender-text: #ffffff; /* Sender text */
+  --icon: #bdbdbd; /* Mid-gray for icons */
+  --list: #374151; /* Sidebar list item background */
+  --nav: #111827; /* Navbar very dark */
+  --badge: #ef4444; /* Red badge color for notifications */
+  --screen: #1a1a1a; /* Overall screen background (very dark) */
+  --skelaton: #2c2f36; /* Skeleton loading shimmer */
+  --logo: #363d47; /* Skeleton loading shimmer */
+  --logoLight: #9ba5b4; /* Skeleton loading shimmer */
+  --text:#959595;
+}
+
+
+.theme-plate2 {
+    --button: #4338CA; /* indigo-700 */
+    --button-hover: #3730A3; /* indigo-800 */
+    --button-text: #ffffff;
+    --list: #EEF2FF; /* indigo-50 */
+    --message-receiver: #E0E7FF; /* indigo-100 */
+    --receiver-text: #0a0a0a;
+    --message-sender: #6366F1; /* indigo-500 */
+    --sender-text: #ffffff;
+    --icon: #4F46E5; /* indigo-600 */
+    --nav: #c7d4fc;
+    --badge: #ca386b; /* same as button */
+    --screen: #ffffff;
+    --skelaton: #c7d2fe; /* indigo-200 */
+    --logo: #4338CA; /* Skeleton loading shimmer */
+  --logoLight: #cdc8ff;
+  --text:#292a2d;
+}
+
+.theme-plate3 {
+    --button: #7f00ff; /* Neon purple button */
+    --button-text: #ffffff; /* White text */
+    --button-hover: #9d4edd; /* Lighter purple on hover */
+    --message-receiver: #0f172a; /* Deep dark blue-gray for receiver */
+    --receiver-text: #7dd3fc; /* Neon sky blue text */
+    --message-sender: #7f00ff; /* Sender message background neon */
+    --sender-text: #ffffff; /* Sender text pure white */
+    --icon: #facc15; /* Neon yellow icons */
+    --list: #1e293b; /* Sidebar list item background */
+    --nav: #0f172a; /* Navbar very dark blue */
+    --badge: #f43f5e; /* Neon pinkish-red for badges */
+    --screen: #0a0a0a; /* Full screen super dark */
+    --skelaton: #334155; /* Cool dark for loading skeletons */
+    --logo: #7f00ff; /* Skeleton loading shimmer */
+  --logoLight: #ebd7ff;
+  --text:#939393;
+}
+.theme-plate4 {
+    --button: #a855f7; /* Soft neon purple */
+    --button-text: #ffffff; /* White */
+    --button-hover: #c084fc; /* Light purple on hover */
+  
+    --message-receiver: #dfe1e4; /* Light gray background for receiver */
+    --receiver-text: #6366f1; /* Neon blue text */
+  
+    --message-sender: #e9d5ff; /* Very light purple for sender message */
+    --sender-text: #4f46e5; /* Deep neon blue text */
+  
+    --icon: #facc15; /* Soft neon yellow icons */
+  
+    --list: #e5e7eb; /* Very light sidebar background */
+    --nav: #d1d5db; /* Light navbar background */
+  
+    --badge: #fb7185; /* Light neon pink badges */
+  
+    --screen: #f9fafb; /* Almost white chat screen */
+  
+    --skelaton: #e5e7eb; /* Light gray skeleton loading */
+  
+    --logo: #a855f7; /* Light neon purple */
+    --logoLight: #f3e8ff; /* Very soft purple shimmer */
+  
+    --text: #4b5563; /* Darker gray text for good contrast */
+  }
+  
+
+/* .theme-plate1 {
+  --button:#0d1b2a;
+ --button-text:var(--sender-text);
+ --button-hover:#1b263b;
+ --message-receiver:var(--list) ;
+ --receiver-text:#0a0a0a ;
+ --message-sender:var(--button);
+ --sender-text:#ffffff ;
+ --icon:var(--button);
+ --list:#e0e1dd;
+ --badge:var(--icon);
+ --screen:#ffffff;
+ --skelaton: #778da9;
+} */
+    
+  
+    /* .theme-plate3 {
+      --button:#070F2B;
+     --button-text:var(--sender-text);
+     --button-hover:#1B1A55;
+     --message-receiver:var(--list) ;
+     --receiver-text:#0a0a0a ;
+     --message-sender:var(--button);
+     --sender-text:#ffffff ;
+     --icon:var(--button);
+     --list:#9290C3;
+     --badge:var(--icon);
+     --screen:#ffffff;
+     --skelaton: #535C91;
+    } */
+  
+    /* .theme-plate4 {
+     --button:#7965ff;
+     --button-text:var(--sender-text);
+     --button-hover:#4d40a7;
+     --message-receiver:var(--list) ;
+     --receiver-text:#0a0a0a ;
+     --message-sender:var(--button);
+     --sender-text:#ffffff ;
+     --icon:var(--button);
+     --list:#F5EFFF;
+     --badge:var(--icon);
+     --screen:#ffffff;
+     --skelaton: #7c74ad;
+    } */
+    /* .theme-plate4 {
+      --button:#6366F1;
+     --button-text:var(--sender-text);
+     --button-hover:#4338CA;
+     --message-receiver:var(--list) ;
+     --receiver-text:#0a0a0a ;
+     --message-sender:var(--button);
+     --sender-text:#ffffff ;
+     --icon:var(--button);
+     --list:#EEF2FF;
+     --badge:var(--icon);
+     --screen:#ffffff;
+     --skelaton: #A5B4FC;
+    } */
+  }
+  
